@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow Board</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+ <main>
+    <nav>
+        <div class="left logo">TaskFlow</div>
+        <div class="right">
+            <button id="toggle-model">
+                <i class="fas fa-plus-circle"></i> Add New Task
+            </button>
+        </div>
+    </nav>
+
+    <section class="board">
+        <div id="todo" class="task-column">
+            <div class="heading">
+                <div class="left">
+                    <i class="fas fa-clipboard-list" id="todo-icon"></i> To Do
+                </div>
+                <div class="right" id="todo-count">0</div>
+            </div>
+        </div>
+
+        <div id="progress" class="task-column">
+            <div class="heading">
+                <div class="left">
+                    <i class="fas fa-spinner" id="progress-icon"></i> In Progress
+                </div>
+                <div class="right" id="progress-count">0</div>
+            </div>
+        </div>
+
+        <div id="done" class="task-column">
+            <div class="heading">
+                <div class="left">
+                    <i class="fas fa-check-circle" id="done-icon"></i> Done
+                </div>
+                <div class="right" id="done-count">0</div>
+            </div>
+        </div>
+    </section>
+ </main>
+
+
+ <div class="model add-new-task">
+    <div class="bg"></div>
+    <div class="center">
+        <input type="text" placeholder="Enter new task" id="titleInput" required>
+        <textarea placeholder="Task description" id="descInput" required></textarea>
+        <button class="add-task-btn" id="add-new-task">
+            <i class="fas fa-plus-circle"></i> Add Task
+        </button>
+    </div>
+ </div>
+
+ <script src="script.js"></script>
+</body>
+</html>
